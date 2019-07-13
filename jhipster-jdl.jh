@@ -1,0 +1,16 @@
+
+entity Entry {
+   title String required,
+   content TextBlob required,
+   date Instant required
+}
+
+
+
+relationship ManyToOne {
+   
+   Entry{blog(name)} to Blog
+}
+
+
+paginate Entry, Tag with infinite-scroll
